@@ -1,6 +1,5 @@
 import pymysql
 import pyodbc
-import pandas as pd
 
 #Connecting to DB Server
 connection = pymysql.connect(host='test-db-instance.crtop2gwcupv.us-east-2.rds.amazonaws.com',
@@ -22,7 +21,7 @@ cursor.connection.commit()
 sql = "use my_database"
 cursor.execute(sql)
 
-# Creating new Table
+# Creating new Table user_id
 sql = '''
 create table user_id (
 uid int not null auto_increment,
@@ -33,7 +32,7 @@ primary key (uid)
 cursor.execute(sql)
 connection.commit()
 
-# Creating new Table
+# Creating new Table habit
 sql = '''
 create table habit (
 habitid int not null auto_increment,
