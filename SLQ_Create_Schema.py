@@ -7,12 +7,16 @@ connection = pymysql.connect(host='test-db-instance.crtop2gwcupv.us-east-2.rds.a
                              password='mypassword',
                              )
 
+#connection = pymysql.connect(host='localhost',
+#                             database='happyhabitsDB',
+#                             user='root')
+
 cursor = connection.cursor()
 
 # Creating new DB
-sql = "drop database my_database"
-cursor.execute(sql)
-cursor.connection.commit()
+#sql = "drop database my_database"
+#cursor.execute(sql)
+#cursor.connection.commit()
 
 sql = "create database my_database"
 cursor.execute(sql)
